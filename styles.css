@@ -1,85 +1,98 @@
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
+/* Variables de colores */
+:root {
+    --color-primario: #1d548f;
+    --color-secundario: #dde6f0;
+    --color-texto: #000000;
+    --color-hover: #529ae2;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Barra superior fija con margen para el menú lateral */
+header .navbar {
+    position: fixed;
+    top: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+    z-index: 1030;
+    background-color: var(--color-primario);
+    color: white;
+    height: 56px;
     display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Menú lateral fijo */
+#sidebarMenu {
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    z-index: 1020;
+    overflow-y: auto;
+    padding-top: 56px; /* Espacio ajustado para la barra superior */
+}
+
+/* Estilo de los botones del menú lateral */
+#sidebarMenu button {
+
+    font-size: 16px;
+    line-height: 24px; /* Tamaño de fuente ajustado para los botones */
+    color: var(--color-texto);
+    background: none; /* Elimina el fondo predeterminado */
+    border: none; /* Elimina el borde */
+    text-align: left; /* Alineación del texto */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 0.25rem;
+    margin: 0.2rem 0; /* Espaciado entre elementos */
+    cursor: pointer; /* Cambia el cursor al estilo de botón */
+}
+
+#sidebarMenu button:hover {
+    background-color: var(--color-hover);
+}
+
+#sidebarMenu a {
+font-size: 15px;
+
+}
+
+/* Contenido principal con margen ajustado */
+main {
+    margin-left: 250px;
+    margin-top: 56px;
+    padding: 20px;
+    background-color: #f8f9fa;
     min-height: 100vh;
 }
 
-/* Menú lateral */
-#sidebarMenu {
-    background-color: #f7e1e9; /* Fondo rosado */
-    color: #000000; /* Texto negro */
-    width: 280px; /* Ancho del menú */
-    height: 100vh; /* Ocupa toda la altura de la ventana */
-    position: fixed; /* Fijo en la pantalla */
-    top: 0;
-    left: 0;
-    overflow-y: auto; /* Permite desplazamiento vertical */
-    padding-top: 20px; /* Espacio superior */
-    border-right: 2px solid #dee2e6; /* Línea divisoria */
-    z-index: 1050; /* Asegura que esté encima de otros elementos */
+/* Ajustes generales para tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
 }
 
-/* Estilo de los enlaces del menú lateral */
-#sidebarMenu .nav-link {
-    color: #000000; /* Texto negro */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transición de hover */
-    border-radius: 0.25rem; /* Bordes redondeados */
-    margin: 0.2rem 0; /* Espaciado entre elementos */
-    padding: 10px 15px; /* Ajuste de relleno */
+table, th, td {
+    border: 1px solid #ddd;
 }
 
-#sidebarMenu .nav-link:hover {
-    background-color: #e9ecef; /* Fondo gris claro al pasar el mouse */
+th, td {
+    padding: 8px;
+    text-align: left;
 }
 
-/* Flechas de submenús */
-.btn-toggle {
-    margin: 0;
-    padding: 0.5rem 1rem; /* Ajusta el relleno */
-    position: relative; /* Para el posicionamiento del ícono de flecha */
-    text-align: left; /* Alineación de texto */
-    width: 100%; /* Botón de ancho completo */
+th {
+    background-color: #f2f2f2;
 }
 
-.btn-toggle::before {
-    content: "";
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-right: 0.5rem;
-    vertical-align: middle;
-    border-left: 0.3em solid transparent;
-    border-right: 0.3em solid transparent;
-    border-top: 0.3em solid currentColor;
-    transition: transform 0.2s ease-in-out;
+tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
-
-.btn-toggle.collapsed::before {
-    transform: rotate(-90deg);
-}
-
-/* Submenús */
-.btn-toggle-nav .btn {
-    color: #000000; /* Texto negro para los botones en los submenús */
-    background: none; /* Sin fondo */
-    border: none; /* Sin borde */
-    width: 100%; /* Tamaño completo */
-    text-align: left; /* Alineación de texto a la izquierda */
-    border-radius: 0.25rem; /* Bordes redondeados */
-}
-
-.btn-toggle-nav .btn:hover {
-    background-color: #e9ecef; /* Fondo gris claro al pasar el mouse */
-}
-
-
-/* Contenido principal */
-#content {
-    margin-left: 0px; /* Ancho del menú lateral */
-    padding: 0px;
-}
-

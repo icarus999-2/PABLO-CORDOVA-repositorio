@@ -25,22 +25,45 @@
 
 <body>
     <!-- Formulario de inicio de sesión -->
+    
     <section id="loginForm" class="container mt-5">
-        <h2>Iniciar Sesión</h2>
-        <form>
-            <div class="mb-3">
-                <label for="username" class="form-label">Nombre de usuario</label>
-                <input type="text" class="form-control" id="username" required>
+        <h3 class="py-3 mdl-layout-title text-center text-md-left d-flex flex-column flex-md-row justify-content-md-center justify-content-start align-items-center px-md-0 px-3 shadow-sm" style="background-color: #007bff; color: white;">
+            <img src="" alt="" class="m-0 mr-md-2 mb-2 mb-md-0" style="height:49px;">
+            <div class="d-md-block d-none text-center text-md-left">
+                UNIVERSIDAD NACIONAL DE INGENIERÍA<br>FACULTAD DE INGENIERÍA MECÁNICA
             </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="password" required>
+            <div class="d-md-none d-block h3 text-center"><b>UNI FIM</b></div>
+        </h3>
+    
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6 col-xl-4">
+                <h4 class="text-center my-4">
+                    <b style="font-size:25px;">INTRANET EARPFIM</b><br>
+                    <span style="font-size:22px">Sistema de Planificación de Recursos Académicos y Empresariales</span>
+                </h4>
+
+                <form class="p-4 border rounded bg-light shadow-sm">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Usuario</label>
+                        <input type="text" class="form-control" id="username" placeholder="Ingresa tu usuario" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" required>
+                    </div>
+                    <button type="button" class="btn btn-primary w-100" onclick="login()">Ingresar</button>
+                </form>
+                
+                <p class="mt-3 text-center">
+                    <a href="#" onclick="showRegisterForm()" class="text-decoration-none" style="color: #007bff;">¿Olvidó su contraseña?</a>
+                </p>
             </div>
-            <button type="button" class="btn btn-primary" onclick="login()">Ingresar</button>
-        </form>
-        <p class="mt-3">¿No tienes una cuenta? <a href="#" onclick="showRegisterForm()">Regístrate aquí</a></p>
+        </div>
     </section>
+    
+
     <!-- Formulario de registro -->
+    
     <section id="registerForm" class="container mt-5" style="display: none;">
         <h2>Registro de Usuario</h2>
         <form>
@@ -56,101 +79,157 @@
         </form>
         <p class="mt-3">¿Ya tienes una cuenta? <a href="#" onclick="showLoginForm()">Inicia sesión aquí</a></p>
     </section>
+    
 
     <!-- Contenido principal -->
-    <section id="content" class="container-fluid">
+    <section id="" class="container-fluid">
 
     <!-- Barra Superior -->
+
     <header>
-        <nav class="navbar navbar-dark bg-primary">
-            <h1 id="username">Nombre de Usuario</h1>
+
+        <nav class="navbar">
+            <span>Nombre de usuario</span>
         </nav>
-        </header>
+
+    </header>
 
         <div class="container-fluid">
+            
+            <div>
+            <img src="/public/assets/img/uni_gray_xs.png" alt="" class="m-0 pl-1" style="height:40px;">
+            </div>
+
             <div class="row">
             <!-- Menú de navegación lateral -->
-                <section id="sidebarMenu" class="flex-shrink-0 p-3">
-                    <ul class="list-unstyled ps-0">
+                <section id="sidebarMenu" class="flex-shrink-0 p-1">
+                <ul class="list-unstyled ps-0">
                     <!-- General -->
-                        <li class="mb-1">
-                            <button class="btn btn-toggle d-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#general-collapse" aria-expanded="false">
-                            General
+                        <li class="material-icons mr-2">
+                            <button class="btn btn-toggle d-flex align-items-center rounded collapsed " data-bs-toggle="collapse" data-bs-target="#general-collapse" aria-expanded="false">
+                                <i class="bi bi-briefcase-fill me-2"></i>
+                                General
+                                <i class="material-icons"></i>
                             </button>
                             <div class="collapse" id="general-collapse">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a class="btn" href="#aula_v">Aula virtual</a></li>
-                                <li><a class="btn" href="#Horario">Mi Horario de clase</a></li>
-                                <li><a class="btn" href="#info_docente">Información docente</a></li>
-                                <li><a class="btn" href="#cursos_asignados">Mis cursos asignados</a></li>
-                                <li><a class="btn" href="#tutoria">Tutoria alumnos</a></li>
-                                <li><a class="btn" href="#asistencia"> Asistencia</a></li>
-                                <li><a class="btn" href="#cargar_notas">Cargar notas ORCE</a></li>
-                                <li><a class="btn" href="#biblioteca">Biblioteca virtual</a></li>
-                                <li><a class="btn" href="#disponi">Mi disponibilidad</a></li>
-                                <li><a class="btn" href="#reclamo_docente">Reclamo del docente</a></li>
-                                <li><a class="btn" href="#correccion_notas">Corrección de notas</a></li>
-                                <li><a class="btn" href="#ayuda_aula">Ayuda en Aula</a></li>
-                                <li><a class="btn" href="#aula_v_titulacion">Aula Virtual Titulación</a></li>
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 ">
+                                <li><a class="btn" href="#aula_v">
+                                    <i class="bi bi-mortarboard-fill p-2"></i>
+                                    Aula virtual FIN</a></li>
+                                <li><a class="btn" href="#Horario">
+                                    <i class="bi bi-pencil-fill p-2"></i>
+                                    Mi Horario de clase</a></li>
+                                <li><a class="btn" href="#info_docente">
+                                    <i class="bi bi-person-square p-2"></i>
+                                    Información docente</a></li>
+                                <li><a class="btn" href="#cursos_asignados">
+                                    <i class="bi bi-bank p-2"></i>
+                                    Mis cursos asignados</a></li>
+                                <li><a class="btn" href="#tutoria">
+                                    <i class="bi bi-pass p-2"></i>
+                                    Tutoria alumnos</a></li>
+                                <li><a class="btn" href="#asistencia">  
+                                    <i class="bi bi-pass p-2"></i>
+                                    Asistencia</a></li>
+                                <li><a class="btn" href="#cargar_notas">
+                                    <i class="bi bi-link p-2"></i>
+                                    Cargar notas ORCE</a></li>
+                                <li><a class="btn" href="#biblioteca">
+                                    <i class="bi bi-journals p-2"></i>
+                                    Biblioteca virtual</a></li>
+                                <li><a class="btn" href="#disponi">
+                                    <i class="bi bi-columns-gap p-2"></i>
+                                    Mi disponibilidad</a></li>
+                                <li><a class="btn" href="#reclamo_docente">
+                                    <i class="bi bi-calendar-check p-2"></i>
+                                    Reclamo del docente</a></li>
+                                <li><a class="btn" href="#correccion_notas">
+                                    <i class="bi bi-calendar-check p-2"></i>
+                                    Corrección de notas</a></li>
+                                <li><a class="btn" href="#ayuda_aula">
+                                    <i class="bi bi-nut p-2"></i>
+                                    Ayuda en Aula</a></li>
+                                <li><a class="btn" href="#aula_v_titulacion">
+                                    <i class="bi bi-mortarboard-fill p-2"></i>
+                                    Aula virtual Titulación</a></li>
                             </ul>
-                        </div>
-                    </li>
+                            </div>
+                        </li>
                     <!-- Administrador -->
-                    <li class="mb-1">
-                        <button class="btn btn-toggle d-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#administrador-collapse" aria-expanded="false">
+                        <li class="mb-1">
+                            <button class="btn btn-toggle d-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#administrador-collapse" aria-expanded="false">
+                            <i class="bi bi-briefcase-fill me-2"></i>
                             Administrador
-                        </button>
-                        <div class="collapse" id="administrador-collapse">
+                            </button>
+                            <div class="collapse" id="administrador-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a class="btn">Submenú 1</a></li>
+                                <li><a class="btn">
+                                    <i class="bi bi-pencil-fill"></i>
+                                    Submenú 1</a></li>
                                 <li><a class="btn">Submenú 2</a></li>
                                 <li><a class="btn">Submenú 3</a></li>
                                 <li><a class="btn">Submenú 4</a></li>
                             </ul>
-                        </div>
-                    </li>
+                            </div>
+                        </li>
                     <!-- Acreditación -->
-                    <li class="mb-1">
-                        <button class="btn btn-toggle d-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#acreditacion-collapse" aria-expanded="false">
-                            Acreditación FIM
-                        </button>
-                        <div class="collapse" id="acreditacion-collapse">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><button class="btn">1</button></li>
-                            </ul>
-                        </div>
-                    </li>
+                        <li class="mb-1">
+                            <button class="btn btn-toggle d-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#acreditacion-collapse" aria-expanded="false">
+                                <i class="bi bi-briefcase-fill me-2"></i>
+                                Acreditación FIM
+                            </button>
+                            <div class="collapse" id="acreditacion-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a class="btn">Submenú 1</a></li>
+                                    <li><a class="btn">Submenú 2</a></li>
+                                    <li><a class="btn">Submenú 3</a></li>
+                                    <li><a class="btn">Submenú 4</a></li>
+                                </ul>
+                            </div>
+                        </li>
                     <!-- Virtual -->
-                    <li class="mb-1">
-                        <button class="btn btn-toggle d-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#virtual-collapse" aria-expanded="false">
-                            Virtual
-                        </button>
-                        <div class="collapse" id="virtual-collapse">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><button class="btn">Submenú 1</button></li>
-                            </ul>
-                        </div>
-                    </li>
+                        <li class="mb-1">
+                            <button class="btn btn-toggle d-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#virtual-collapse" aria-expanded="false">
+                                <i class="bi bi-briefcase-fill me-2"></i>
+                                Virtual
+                            </button>
+                            <div class="collapse" id="virtual-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a class="btn">Submenú 1</a></li>
+                                    <li><a class="btn">Submenú 2</a></li>
+                                    <li><a class="btn">Submenú 3</a></li>
+                                    <li><a class="btn">Submenú 4</a></li>
+                                </ul>
+                            </div>
+                        </li>
                     <!-- Documentos Académicos -->
-                    <li class="mb-1">
-                        <a class="btn btn-toggle d-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#docac-collapse" aria-expanded="false">
-                            Documentos académicos
-                        </a>
-                        <div class="collapse" id="docac-collapse">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a class="btn">Submenú 1</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="border-top my-3"></li>
-                    </ul>
+                        <li class="mb-1">
+                            <button class="btn btn-toggle d-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#docu-collapse" aria-expanded="false">
+                                <i class="bi bi-briefcase-fill me-2"></i>
+                                Documentos académicos
+                                </button>
+                                <div class="collapse" id="docu-collapse">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a class="btn">Submenú 1</a></li>
+                                        <li><a class="btn">Submenú 2</a></li>
+                                        <li><a class="btn">Submenú 3</a></li>
+                                        <li><a class="btn">Submenú 4</a></li>
+                                    </ul>
+                                </div>
+                        </li>
+                    
+                </ul>
                 </section>
             </div>
         </div>
-        
-        <section class="container-fluid">
-            <h2 id="Horario">Horario</h2>
-            <table class="table table-striped">
+    
+    <main>    
+        <div>
+            <section id="Horario" class="container-fluid">
+            <h2 >HORARIO DE CLASE</h2>
+            <h4>Nota : precione en los cuadros a colores para listar alumnos</h4>
+                <button>Descargar PDF</button>
+            <table>
                 <thead>
                     <tr>
                         <th>Hora</th>
@@ -159,17 +238,32 @@
                         <th>Miércoles</th>
                         <th>Jueves</th>
                         <th>Viernes</th>
+                        <th>Sábado</th>
+                        <th>Domingo</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>08:00 - 09:00</td>
+                        <td>07:00 - 08:00</td>
                         <td>Matemáticas</td>
                         <td>Inglés</td>
                         <td>Historia</td>
                         <td>Geografía</td>
                         <td>Ciencias</td>
+                        <td></td>
+                        <td></td>
+                    </td>
+                    <tr>
+                        <td>08:00 - 9:00</td>
+                        <td>Matemáticas</td>
+                        <td>Inglés</td>
+                        <td>Historia</td>
+                        <td>Geografía</td>
+                        <td>Ciencias</td>
+                        <td></td>
+                        <td></td>
                     </tr>
+
                     <tr>
                         <td>09:00 - 10:00</td>
                         <td>Matemáticas</td>
@@ -177,14 +271,297 @@
                         <td>Historia</td>
                         <td>Geografía</td>
                         <td>Ciencias</td>
+                        <td></td>
+                        <td></td>
                     </tr>
-                    <!-- Agregar más filas según sea necesario -->
+
+                    <tr>
+                        <td>10:00 - 11:00</td>
+                        <td>Matemáticas</td>
+                        <td>Inglés</td>
+                        <td>Historia</td>
+                        <td>Geografía</td>
+                        <td>Ciencias</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>11:00 - 12:00</td>
+                        <td>Matemáticas</td>
+                        <td>Inglés</td>
+                        <td>Historia</td>
+                        <td>Geografía</td>
+                        <td>Ciencias</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>13:00 - 14:00</td>
+                        <td>Matemáticas</td>
+                        <td>Inglés</td>
+                        <td>Historia</td>
+                        <td>Geografía</td>
+                        <td>Ciencias</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>14:00 - 15:00</td>
+                        <td>Matemáticas</td>
+                        <td>Inglés</td>
+                        <td>Historia</td>
+                        <td>Geografía</td>
+                        <td>Ciencias</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>15:00 - 16:00</td>
+                        <td>Matemáticas</td>
+                        <td>Inglés</td>
+                        <td>Historia</td>
+                        <td>Geografía</td>
+                        <td>Ciencias</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>16:00 - 17:00</td>
+                        <td>Matemáticas</td>
+                        <td>Inglés</td>
+                        <td>Historia</td>
+                        <td>Geografía</td>
+                        <td>Ciencias</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>17:00 - 18:00</td>
+                        <td>Matemáticas</td>
+                        <td>Inglés</td>
+                        <td>Historia</td>
+                        <td>Geografía</td>
+                        <td>Ciencias</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>18:00 - 19:00</td>
+                        <td>Matemáticas</td>
+                        <td>Inglés</td>
+                        <td>Historia</td>
+                        <td>Geografía</td>
+                        <td>Ciencias</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>19:00 - 20:00</td>
+                        <td>Matemáticas</td>
+                        <td>Inglés</td>
+                        <td>Historia</td>
+                        <td>Geografía</td>
+                        <td>Ciencias</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>20:00 - 21:00</td>
+                        <td>Matemáticas</td>
+                        <td>Inglés</td>
+                        <td>Historia</td>
+                        <td>Geografía</td>
+                        <td>Ciencias</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>21:00 - 22:00</td>
+                        <td>Matemáticas</td>
+                        <td>Inglés</td>
+                        <td>Historia</td>
+                        <td>Geografía</td>
+                        <td>Ciencias</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>21:00 - 22:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>22:00 - 23:00</td>
+                        <td>Matemáticas</td>
+                        <td>Inglés</td>
+                        <td>Historia</td>
+                        <td>Geografía</td>
+                        <td>Ciencias</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
                 </tbody>
-            </table>
-        </section>
+                </table>
+            </section>
+        </div>
+        
+        <div id="asistencia">
+        <section class="container">
+            <div  class="header">
+                <label for="semestre">Semestre:</label>
+                <select id="semestre" class="form-select d-inline-block w-auto">
+                    <option>2024</option>
+                    <option>2024</option>
+                </select>
+                <p>Presione este botón solo cuando tenga que registrar su entrada y salida de clase</p>
+                <div class="d-flex justify-content-center align-items-center">
+                    <span id="current-time" class="me-3">Hora: 12:24:46</span>
+                    <button class="btn btn-success">Marcar mi Asistencia: Entrada / Salida</button>
+                    <a href="#" class="ms-2">Ayuda</a>
+                </div>
+            </div>
     
-
-
+            <!-- Opciones de Asistencia -->
+            <div class="buttons-container text-center">
+                <button class="btn btn-primary">Tomar Asistencia Alumnos</button>
+                <br>
+                <button class="btn btn-primary">Solicitar Recuperación / Justificación</button>
+                <div class="mt-3">
+                    <button class="btn btn-primary">P: Puntual</button>
+                    <button class="btn btn-primary">T: Tardanza (min)</button>
+                    <button class="btn btn-primary">F: Falta</button>
+                    <button class="btn btn-primary">N.N: N.N</button>
+                    <button class="btn btn-primary">Reporte</button>
+                </div>
+            </div>
+    
+            <!-- Acordion  mes-->
+            <div class="accordion" id="attendanceAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingMay">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMay" aria-expanded="true" aria-controls="collapseMay">
+                            MAYO 2024
+                        </button>
+                    </h2>
+                    <div id="collapseMay" class="accordion-collapse collapse show" aria-labelledby="headingMay" data-bs-parent="#attendanceAccordion">
+                        <div class="accordion-body">
+                            <!-- Table -->
+                            <table class="table table-bordered report-table">
+                                <thead class="table-primary">
+                                    <tr>
+                                        <th>Día</th>
+                                        <th>Curso</th>
+                                        <th>Horario</th>
+                                        <th>Marcación</th>
+                                        <th>Est</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Viernes 12</td>
+                                        <td>MC510-E (TEO)</td>
+                                        <td>11-13</td>
+                                        <td>11:02 - 13:00</td>
+                                        <td class="bg-success text-white">P</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Viernes 12</td>
+                                        <td>BICO1-F (PRA)</td>
+                                        <td>09-11</td>
+                                        <td>09:00 - 11:24</td>
+                                        <td class="bg-success text-white">P</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Viernes 12</td>
+                                        <td>BICO1-F (TEO)</td>
+                                        <td>08-09</td>
+                                        <td>08:04 - 09:00</td>
+                                        <td class="bg-success text-white">P</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jueves 11</td>
+                                        <td>MBS36-I (PRA)</td>
+                                        <td>19-22</td>
+                                        <td>19:00 - 22:00</td>
+                                        <td class="bg-success text-white">P</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+    
+    
+            </div>
+        </section>
+        
+        <style>.container {
+            margin: 20px auto;
+            max-width: 900px;
+            }
+            
+            
+            .header {
+            background: #fff;
+            border: 1px solid #dee2e6;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+            }
+            
+            .header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            }
+            
+            .buttons-container {
+            margin: 20px 0;
+            }
+            
+            .buttons-container button {
+            margin: 5px;
+            }
+            
+            .report-table {
+            margin-top: 20px;
+            }
+            
+            .accordion-button {
+            background-color: #0d6efd;
+            color: #fff;
+            }
+            
+            .accordion-button:not(.collapsed) {
+            background-color: #0056b3;
+            }
+            
+            .table th, .table td {
+            vertical-align: middle;
+            }
+        </style>
+        
+        </div>
+    
+    </main>
     </section>
 
     <!-- Bootstrap JS -->

@@ -26,9 +26,4 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('registerForm').style.display = 'none';
         document.getElementById('content').style.display = 'block'; // Muestra el contenido principal
     };
-
-
-
 });
-
-
