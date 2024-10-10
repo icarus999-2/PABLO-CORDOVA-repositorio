@@ -15,15 +15,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Simula el proceso de inicio de sesión
     window.login = function() {
-        // Aquí puedes agregar la lógica de validación
+        // Aquí  agregar la lógica de validación
         document.getElementById('loginForm').style.display = 'none';
-        document.getElementById('content').style.display = 'block'; // Muestra el contenido principal
+        document.getElementById('content').style.display = 'block';
     };
 
     // Simula el proceso de registro
     window.register = function() {
-        // Aquí puedes agregar la lógica de validación y almacenamiento
+        // Aquí  agregar la lógica de validación y almacenamiento
         document.getElementById('registerForm').style.display = 'none';
-        document.getElementById('content').style.display = 'block'; // Muestra el contenido principal
+        document.getElementById('content').style.display = 'block';
     };
 });

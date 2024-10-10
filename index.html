@@ -24,21 +24,33 @@
 </head>
 
 <body>
+<style>
+    body{
+        background: #fff;
+    }
+
+</style>
+
     <!-- Formulario de inicio de sesión -->
     
-    <section id="loginForm" class="container mt-5">
-        <h3 class="py-3 mdl-layout-title text-center text-md-left d-flex flex-column flex-md-row justify-content-md-center justify-content-start align-items-center px-md-0 px-3 shadow-sm" style="background-color: #007bff; color: white;">
-            <img src="" alt="" class="m-0 mr-md-2 mb-2 mb-md-0" style="height:49px;">
-            <div class="d-md-block d-none text-center text-md-left">
-                UNIVERSIDAD NACIONAL DE INGENIERÍA<br>FACULTAD DE INGENIERÍA MECÁNICA
+    <div id="loginForm" class="container mt-0">
+        <h3 class=" py-3 mdl-layout-title mdl-color--indigo-500 text-white d-flex flex-row justify-content-md-center justify-content-start align-items-center px-md-0 px-3" style="background-color: #007bff; box-shadow: 1px 3px 3px 1px #bdbdbd">
+            <img src="logo_uni.png" alt class ="m-0 mr-2" style="height:49px;">
+            <div class="d-md-block d-none text-md-left">
+                UNIVERSIDAD NACIONAL DE INGENIERÍA
+                <br>
+                FACULTAD DE INGENIERÍA MECÁNICA
             </div>
-            <div class="d-md-none d-block h3 text-center"><b>UNI FIM</b></div>
+            <div class="d-md-none d-block h3">
+                <b>UNI FIM</b>
+            </div>
         </h3>
     
         <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-6 col-xl-4">
-                <h4 class="text-center my-4">
-                    <b style="font-size:25px;">INTRANET EARPFIM</b><br>
+            <div class="mdl-color--white mdl-color-text--grey-800 col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12 m-auto px-0">
+                <h4 class="text-center my-4 mx-auto" style="max-width: 700px;">
+                    <b style="font-size:25px;">INTRANET EARPFIM</b>
+                    <br>
                     <span style="font-size:22px">Sistema de Planificación de Recursos Académicos y Empresariales</span>
                 </h4>
 
@@ -59,7 +71,7 @@
                 </p>
             </div>
         </div>
-    </section>
+    </div>
     
 
     <!-- Formulario de registro -->
@@ -82,7 +94,7 @@
     
 
     <!-- Contenido principal -->
-    <section id="" class="container-fluid">
+    <section id="content" class="container-fluid">
 
     <!-- Barra Superior -->
 
@@ -95,13 +107,12 @@
     </header>
 
         <div class="container-fluid">
-            
             <div>
             <img src="/public/assets/img/uni_gray_xs.png" alt="" class="m-0 pl-1" style="height:40px;">
             </div>
-
+        <!-- Menú de navegación lateral -->
             <div class="row">
-            <!-- Menú de navegación lateral -->
+            
                 <section id="sidebarMenu" class="flex-shrink-0 p-1">
                 <ul class="list-unstyled ps-0">
                     <!-- General -->
@@ -112,7 +123,7 @@
                                 <i class="material-icons"></i>
                             </button>
                             <div class="collapse" id="general-collapse">
-                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 ">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 ">
                                 <li><a class="btn" href="#aula_v">
                                     <i class="bi bi-mortarboard-fill p-2"></i>
                                     Aula virtual FIN</a></li>
@@ -221,15 +232,18 @@
                 </ul>
                 </section>
             </div>
+        <!-- Menú de navegación lateral -->
+        
         </div>
     
     <main>    
+        
         <div>
-            <section id="Horario" class="container-fluid">
-            <h2 >HORARIO DE CLASE</h2>
+            
+            <h2 id="Horario" >HORARIO DE CLASE</h2>
             <h4>Nota : precione en los cuadros a colores para listar alumnos</h4>
                 <button>Descargar PDF</button>
-            <table>
+                <table>
                 <thead>
                     <tr>
                         <th>Hora</th>
@@ -420,7 +434,7 @@
 
                 </tbody>
                 </table>
-            </section>
+
         </div>
         
         <div id="asistencia">
