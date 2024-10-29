@@ -1,0 +1,40 @@
+{
+    "cursos": [
+      {
+        "id": 1,
+        "codCurso": "BIF01",
+        "nomCurso": "curso_1",
+        "secCurso": "C/D",
+        "codDocente": 87546374,
+        "docente": "docente_1",
+        "teopra": "T/P",
+        "hora": "08-10",
+        "dia": "Ma",
+        "semestre": 20242
+      },
+      {
+        "id": 2,
+        "codCurso": "BIF02",
+        "nomCurso": "curso_2",
+        "secCurso": "E/F",
+        "codDocente": 12345678,
+        "docente": "docente_2",
+        "teopra": "T/P",
+        "hora": "10-12",
+        "dia": "Ma",
+        "semestre": 20242
+      },
+      {
+        "id": 3,
+        "codCurso": "BIF01",
+        "nomCurso": "curso_3",
+        "secCurso": "C/D",
+        "codDocente": 87546374,
+        "docente": "docente_3",
+        "teopra": "T/P",
+        "hora": "08-12",
+        "dia": "Mi",
+        "semestre": 20242
+      }
+    ]
+  }  
