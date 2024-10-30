@@ -23,8 +23,8 @@ form {
 
 .no-border {
     border: none;
-    outline: none; /* También puedes eliminar el borde de enfoque */
-    background-color: transparent; /* Si quieres que el fondo sea transparente */
+    outline: none; /*eliminar el borde de enfoque */
+    background-color: transparent; /*fondo transparente */
     padding: 10px 20px; /* Ajusta el espacio interno si es necesario */
     font-size: 16px; /* Ajusta el tamaño del texto si es necesario */
     cursor: pointer;
@@ -80,15 +80,13 @@ button:hover {
 header .navbar {
     text-align: left;
     display: block;
-    position: relative;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-size: 20px;
     line-height: 1;
     letter-spacing: .02em;
     font-weight: 400;
     box-sizing: border-box;
-    position: fixed;
-    left: 309px;
+    left: 317px;
     width: 90%;
     z-index: 1030;
     background-color: #3f51b5 !important;
@@ -96,7 +94,6 @@ header .navbar {
     height: 56px;
     display: flex;
     align-items: center;
-    padding: 0 20px;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0.15, 0.25);
 
 }
@@ -115,7 +112,7 @@ header .navbar {
     width: 309px;
     z-index: 1020;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0.15, 0.25);
-    padding-top: 0cqw !important;
+    padding-top: 0px !important;
 }
 /* Estilo de los botones del menú lateral */
 #sidebarMenu button {
@@ -146,9 +143,7 @@ h4{
 /* Contenido principal con margen ajustado */
 main {
     margin-left: 317px;
-    margin-top: 55px;
     background-color: white;
-    min-height: 100vh;
 }
 
 /* Ajustes generales para tablas */
@@ -186,11 +181,10 @@ th {
 }
 
 #Horario_clase{
-    width: 1505px; /*ancho*/
-    height: 900px; /*alto*/
-    padding-top: 25px;
+    width: 1500px; /*ancho*/
+    height: fixed; /*alto*/
     padding-left: 20px;
-    margin: 15px;
+
 }
 
 
