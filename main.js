@@ -6,14 +6,14 @@ async function mostrarHorario() {
   
     // Función auxiliar para obtener el índice de la fila basado en la hora
     function obtenerIndiceFila(hora) {
-      // Ajusta esta lógica según tu formato de hora en el JSON
+      
       const horas = hora.split('-');
       const horaInicio = parseInt(horas[0]);
       // Suponiendo que cada fila representa una hora, ajusta el cálculo si es diferente
       return horaInicio - 7; // Asumiendo que la primera fila corresponde a las 7:00
     }
   
-    // Función auxiliar para obtener el índice de la columna basado en el día
+    // Obtener el índice de la columna basado en el día
     function obtenerIndiceColumna(dia) {
       const diasSemana = [' ','Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa', 'Do'];
       return diasSemana.indexOf(dia);

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistencia Docente</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="https://www.earpunifim.com/assets/img/uni_color_xs.png" type="imagen/png">
+        
+</head>
+<body>
+    <body>
+        <section id="content" class="container-fluid">
+            <!-- Barra Superior -->
+            
+    <header>
+            <nav class="navbar">
+                <span>CORDOVA DIAZ, PABLO</span>
+            </nav>
+    </header>
+            
+    <main>  
+                <div class="container">
+                        <!-- Menú de navegación lateral -->
+                    <div>
+                        <div class="row">
+                            <!-- <a href="home.html" class="d-flex">-->
+                                <div id="sidebarMenu" class="flex-shrink-0 mt-0">
+                                <!-- imagen del menu lateral-->
+                                    <div class="d-flex">
+                                        <img src="https://www.earpunifim.com/assets/img/uni_gray_xs.png" alt="logo_conte" class="mt-1 pl-1" style="height:40px;">
+                                        <div class="ms-2">
+                                            <h4 class="mb-0 mt-0">
+                                            <b id="sbm_b" class="d-flex">UNI UNI | EARPFIM</b>
+                                           <!-- <small class="mdl-typography--caption" >PRACTICANTE</small>-->
+                                            </h4>
+                                        </div>
+                                    </div>
+                            <!--</a>-->    
+                                <ul class="list-unstyled">
+                                <!-- General -->
+                                    <li class="material-icons mt-2">
+                                        <button class="btn btn-toggle d-flex align-items-center rounded collapsed " data-bs-toggle="collapse" data-bs-target="#general-collapse" aria-expanded="false">
+                                            <i class="bi bi-briefcase-fill me-2"></i>
+                                            General
+                                            <i class="material-icons"></i>
+                                        </button>
+                                        <div class="collapse" id="general-collapse">
+                                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 ">
+                                            <li><a class="btn" href="#aula_v">
+                                                <i class="bi bi-mortarboard-fill p-2"></i>
+                                                Aula virtual FIN</a></li>
+                                            <li><a class="btn" href="contenido.html">
+                                                <i class="bi bi-pencil-fill p-2"></i>
+                                                Mi Horario de clase</a></li>
+                                            <li><a class="btn" href="info_docente.html">
+                                                <i class="bi bi-person-square p-2"></i>
+                                                Información docente</a></li>
+                                            <li><a class="btn" href="#cursos_asignados">
+                                                <i class="bi bi-bank p-2"></i>
+                                                Mis cursos asignados</a></li>
+                                            <li><a class="btn" href="#tutoria">
+                                                <i class="bi bi-pass p-2"></i>
+                                                Tutoria alumnos</a></li>
+                                            <li><a class="btn" href="asistencia_docente.html">  
+                                                <i class="bi bi-pass p-2"></i>
+                                                Asistencia</a></li>
+                                            <li><a class="btn" href="#cargar_notas">
+                                                <i class="bi bi-link p-2"></i>
+                                                Cargar notas ORCE</a></li>
+                                            <li><a class="btn" href="#biblioteca">
+                                                <i class="bi bi-journals p-2"></i>
+                                                Biblioteca virtual</a></li>
+                                            <li><a class="btn" href="#disponi">
+                                                <i class="bi bi-columns-gap p-2"></i>
+                                                Mi disponibilidad</a></li>
+                                            <li><a class="btn" href="#reclamo_docente">
+                                                <i class="bi bi-calendar-check p-2"></i>
+                                                Reclamo del docente</a></li>
+                                            <li><a class="btn" href="#correccion_notas">
+                                                <i class="bi bi-calendar-check p-2"></i>
+                                                Corrección de notas</a></li>
+                                            <li><a class="btn" href="#ayuda_aula">
+                                                <i class="bi bi-nut p-2"></i>
+                                                Ayuda en Aula</a></li>
+                                            <li><a class="btn" href="#aula_v_titulacion">
+                                                <i class="bi bi-mortarboard-fill p-2"></i>
+                                                Aula virtual Titulación</a></li>
+                                        </ul>
+                                        </div>
+                                    </li>
+                                <!-- Administrador -->
+                                    <li class="mb-1">
+                                        <button class="btn btn-toggle d-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#administrador-collapse" aria-expanded="false">
+                                        <i class="bi bi-briefcase-fill me-2"></i>
+                                        Administrador
+                                        </button>
+                                        <div class="collapse" id="administrador-collapse">
+                                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                            <li><a class="btn">
+                                                <i class="bi bi-pencil-fill"></i>
+                                                Submenú 1</a></li>
+                                            <li><a class="btn">Submenú 2</a></li>
+                                            <li><a class="btn">Submenú 3</a></li>
+                                            <li><a class="btn">Submenú 4</a></li>
+                                        </ul>
+                                        </div>
+                                    </li>
+                                <!-- Acreditación -->
+                                    <li class="mb-1">
+                                        <button class="btn btn-toggle d-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#acreditacion-collapse" aria-expanded="false">
+                                            <i class="bi bi-briefcase-fill me-2"></i>
+                                            Acreditación FIM
+                                        </button>
+                                        <div class="collapse" id="acreditacion-collapse">
+                                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                                <li><a class="btn">Submenú 1</a></li>
+                                                <li><a class="btn">Submenú 2</a></li>
+                                                <li><a class="btn">Submenú 3</a></li>
+                                                <li><a class="btn">Submenú 4</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                <!-- Virtual -->
+                                    <li class="mb-1">
+                                        <button class="btn btn-toggle d-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#virtual-collapse" aria-expanded="false">
+                                            <i class="bi bi-briefcase-fill me-2"></i>
+                                            Virtual
+                                        </button>
+                                        <div class="collapse" id="virtual-collapse">
+                                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                                <li><a class="btn">Submenú 1</a></li>
+                                                <li><a class="btn">Submenú 2</a></li>
+                                                <li><a class="btn">Submenú 3</a></li>
+                                                <li><a class="btn">Submenú 4</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                <!-- Documentos Académicos -->
+                                    <li class="mb-1">
+                                        <button class="btn btn-toggle d-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#docu-collapse" aria-expanded="false">
+                                            <i class="bi bi-briefcase-fill me-2"></i>
+                                            Documentos académicos
+                                            </button>
+                                            <div class="collapse" id="docu-collapse">
+                                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                                    <li><a class="btn">Submenú 1</a></li>
+                                                    <li><a class="btn">Submenú 2</a></li>
+                                                    <li><a class="btn">Submenú 3</a></li>
+                                                    <li><a class="btn">Submenú 4</a></li>
+                                                </ul>
+                                            </div>
+                                    </li>
+                                </ul>
+                                </div>
+                        </div>
+                    </div>
+    
+                    </div>
+                </div>
+
+                <div class="container">
+                    
+                    <div class="header">
+                        <label for="semestre">Semestre:</label>
+                        <select id="semestre" class="form-select d-inline-block w-auto align-items-left">
+                            <option>2023</option>
+                            <option>2024</option>
+                        </select>
+                        <p>Presione este botón solo cuando tenga que registrar su entrada y salida de clase</p>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span id="current-time" class="me-3">Hora: 12:24:46</span>
+                            <button class="btn btn-success">Marcar mi Asistencia: Entrada / Salida</button>
+                            <a href="#" class="ms-2">Ayuda</a>
+                        </div>
+                    </div>
+            
+                    <!-- Opciones de Asistencia -->
+                    <div class="buttons-container text-center">
+                        <button class="btn btn-primary">Tomar Asistencia Alumnos</button>
+                        <br>
+                        <button class="btn btn-primary">Solicitar Recuperación / Justificación</button>
+                        <div class="mt-3">
+                            <button class="btn btn-primary">P: Puntual</button>
+                            <button class="btn btn-primary">T: Tardanza (min)</button>
+                            <button class="btn btn-primary">F: Falta</button>
+                            <button class="btn btn-primary">N.N: N.N</button>
+                            <button class="btn btn-primary">Reporte</button>
+                        </div>
+                    </div>
+            
+                    <!-- Acordion  mes-->
+                    <div class="accordion" id="attendanceAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingMay">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMay" aria-expanded="true" aria-controls="collapseMay">
+                                    MAYO 2024
+                                </button>
+                            </h2>
+                            <div id="collapseMay" class="accordion-collapse collapse show" aria-labelledby="headingMay" data-bs-parent="#attendanceAccordion">
+                                <div class="accordion-body">
+                                    <!-- Table -->
+                                    <table class="table table-bordered report-table">
+                                        <thead class="table-primary">
+                                            <tr>
+                                                <th>Día</th>
+                                                <th>Curso</th>
+                                                <th>Horario</th>
+                                                <th>Marcación</th>
+                                                <th>Est</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="bg-success text-white"></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="bg-success text-white"></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="bg-success text-white"></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="bg-success text-white"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+            
+            
+                    </div>
+                </div>
+
+    </main>
+        </section>
+            
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <!-- Custom JS -->
+        <script src="main.js"></script>
+    </body>
+</body>
+</html>
