@@ -68,7 +68,7 @@
     // Captura el formulario
         const loginForm = document.getElementById('loginForm');
 
-    // ubicar el evento 'submit' -boton- del formulario
+    // ubicar el evento 'submit'/enviar -boton- del formulario
         loginForm.addEventListener('submit', function(event) {
             event.preventDefault(); //(evita el refresco de página)
 
@@ -78,7 +78,7 @@
 
         // Validación simple (solo para simulacion)
             if (username === "admin" && password === ":P") {
-            // Si las credenciales son correctas, redirige a contenido.html
+            // Si las credenciales son correctas, redirige a home.html
             window.location.href = "home.html";
             } else {
             // Muestra un mensaje de error si las credenciales no son válidas
