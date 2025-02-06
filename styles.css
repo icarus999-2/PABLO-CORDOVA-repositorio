@@ -36,7 +36,7 @@ form {
     font-size: 16px; /* Ajusta el tamaño del texto si es necesario */
     cursor: pointer;
 }
-
+/*boton descarga pdf*/
 #Horario_button {
     background-color: red;
     color: white;
@@ -44,7 +44,7 @@ form {
     border: none;
     border-radius: 5px;
 }
-
+/*simulacion del login*/
 button:hover {
     background-color: darken(var(--blue), 10%);
 }
@@ -93,7 +93,7 @@ header .navbar {
     letter-spacing: .02em;
     font-weight: 400;
     box-sizing: border-box;
-    left: 297px;
+    left: 290px;
     width: 85%;
     background-color: #3f51b5 !important;
     color: white;
@@ -154,6 +154,14 @@ main {
     position: static;
 }
 
+/*HORARIO DE CLASE*/
+#Horario_clase{
+    height: fixed; /*alto*/
+    width: 1480px;
+    padding-left: 50px;
+    padding-top: 20px ;
+}
+
 /* Ajustes generales para tablas */
 table {
     width: 100%;
@@ -169,6 +177,8 @@ th, td, tr{
     padding: 6px;
     text-align: center;
     font-size: 16px;
+    width: 15px !important;
+    height: 20px !important;      
 }
 
 td:not(:empty) {
@@ -182,24 +192,8 @@ th {
     font-size: 20px;
 }
 
-#tdh {
-    width: 15px !important;
-    height: 20px !important;    
-}
 
-#Horario_clase{
-    height: fixed; /*alto*/
-    width: 1480px;
-    padding-left: 10px;
-}
 
-/*.mdl-typography--caption{
-    font-size: 11px;
-    font-weight: 300;
-    line-height: 1;
-    letter-spacing: 0;
-}
-*/
 /* INFO DOCENTE*/
 .profile-container {
     max-width: 900px;
