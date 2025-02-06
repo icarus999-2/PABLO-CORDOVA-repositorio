@@ -1,5 +1,5 @@
 async function mostrarHorario() {
-    const response = await fetch('http://127.0.0.1:5501/datos.json');
+    const response = await fetch('http://127.0.0.1:5500/datos.json');
     const data = await response.json();
   
     const tabla = document.getElementById('Horario_clase').querySelector('tbody');
