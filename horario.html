@@ -21,8 +21,11 @@
 <section id="content" class="container-fluid">
 <!-- Barra Superior -->
 
-<header>
+<header id="nombre_usuario">
         <nav class="navbar">
+            <button id="ocultarsidebar" class="btn">
+                <i class="bi bi-justify-left"></i>
+            </button>
             <span>CORDOVA DIAZ, PABLO</span>
         </nav>
 </header>
@@ -372,5 +375,22 @@
     <!-- Custom JS -->
 
     <script src="horariojs.js"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const sidebar = document.getElementById("sidebarMenu");
+        const content = document.getElementById("content");
+        const toggleButton = document.getElementById("ocultarsidebar");
+
+        toggleButton.addEventListener("click", function () {
+            sidebar.classList.toggle("hidden");
+            content.classList.toggle("full-width");
+        });
+
+        
+
+    });
+    </script>
+
 </body>
 </html>

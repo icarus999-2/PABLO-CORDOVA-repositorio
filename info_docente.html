@@ -20,6 +20,9 @@
         
 <header>
                 <nav class="navbar">
+                    <button id="ocultarsidebar" class="btn">
+                        <i class="bi bi-justify-left"></i>
+                    </button>
                     <span>CORDOVA DIAZ, PABLO</span>
                 </nav>
 </header>
@@ -222,6 +225,17 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- Custom JS -->
-    <script src="main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleButton = document.getElementById("ocultarsidebar");
+            const sidebar = document.getElementById("sidebarMenu");
+            const mainContent = document.querySelector("main");
+    
+            toggleButton.addEventListener("click", function () {
+                sidebar.classList.toggle("hidden");
+                mainContent.classList.toggle("expanded");
+            });
+        });
+    </script>
 </body>
 </html>
