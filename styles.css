@@ -70,43 +70,74 @@ button:hover {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .separador-login {
     position: relative;
     height: 20px;
+}
+
+.loader{
+    border: 8px solid white;
+    border-top: 8px solid var(--blue);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform:  rotate(360deg);
+    }
 }
 
 /* Barra superior fija con margen para el menú lateral */
 .navbar {
     display: flex;
     align-items: left;
+    left: 305px;
     position: fixed;
-    left: 300px;
     padding-left: 50px; 
     font-family: "Arial";
     font-size: 20px;
     line-height: 1;
     letter-spacing: .02em;
-    left: 305px;
     width: 100%; 
     background-color: #3f51b5 !important;
     color: white;
     height: 56px;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0.15, 0.25);
-}
-/*
-header {   
-    position: fixed;
-    display: flex;
-    padding: 0%;
-    top: 0px;
-    
-}header*/
-
-#content {
-    background-color: #ffffff;
-    transition: margin-left 0.3s ease;
+    transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
 }
 
+.full-width header {
+    width: 100%;
+}
+
+.full-width .navbar {
+    left: 0;
+    width: 100%;
+}
+
+.full-width .section {
+    left: 0;
+    width: 100%;
+}
+
+.section {
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.full-width {
+    margin-left: 0 !important;
+    width: 100%;
+}
 
 /* Menú lateral fijo */
 #sidebarMenu button {
@@ -151,14 +182,6 @@ header {
     color: white;
 }
 
-.sidebar-hidden section{
-    margin-left: -305px;
-}
-
-.sidebar-hidden .navbar{
-    margin-left: -305px;
-}
-
 /* Estilo de los botones del menú lateral */
 #sidebarMenu button:hover {
     background-color: var(--color-hover);
@@ -168,6 +191,7 @@ header {
 font-size: 15px;
 
 }
+
 h4{
     font-size: 16px;
 }
@@ -180,21 +204,21 @@ h4{
     padding: 5px;
     border: none;
     border-radius: 5px;
+    top: 15px;
 }
 
 #Horario_clase{
     position: absolute;
-    width: 1480px;
-    padding-left: 50px;
-    top: 95px;
-    
+    width: 80%;
+    left: 345px;
+    top: 90px;
 }
 
 /* Ajustes generales para tablas */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 15px 0;
+    margin-top: 15px;
 }
 
 table, th, td {
@@ -202,11 +226,11 @@ table, th, td {
 }
 
 th, td, tr{
-    padding: 6px;
+    padding: 0px;
     text-align: center;
-    font-size: 16px;
-    width: 15px !important;
-    height: 20px !important;      
+    font-size: 18px;
+    width: 100px !important;
+    height: 40px !important;      
 }
 
 td:not(:empty) {
@@ -220,20 +244,21 @@ th {
     font-size: 20px;
 }
 
-
+#info_docente{
+    position:fixed ;
+    top: 95px !important;
+    left: 345px;
+    width: 80%;
+    height: 85%;
+}
 
 /* INFO DOCENTE*/
 .profile-container {
-    max-width: 900px;
-    margin: 0 auto;
-    background-color: #8b8080;
-    padding: 80px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 45px;
 }
 
 .profile-header {
-
     justify-content: space-between;
     border-bottom: 2px solid #ddd;
     padding-bottom: 15px;
@@ -244,76 +269,138 @@ th {
     width: 100px;
     height: 100px;
     border-radius: 20%;
-    margin: 10px;
+    margin: 5px;
+    
+}
+
+.profile-info{
+    position: fixed;
+    left: 550px;
 }
 
 .profile-info h2 {
-    font-size: 26px;
+    font-size: 30px;
     padding-left: 10px;
     text-align: left;
-    
 }
 
 .profile-info p {
     margin: 5px 0 0;
-    font-size: 18px;
+    font-size: 20px;
     padding-left: 10px;
     text-align: left;
 }
 
 .profile-actions .btn {
-    margin-top: 30px !important;
-    border-spacing : 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 0px;
+    margin-top: 15px !important;
+    border-spacing : 15px;
+    background-color: #fafafa;
+    color: #000000;
+    border-radius: 5px;
     cursor: pointer;
-
+    border-color: #d6d0d0;
 }
 
 .profile-actions .btn:hover {
-    background-color: #0056b3;
+    background-color: #d0d2d4;
 }
 
-.tabs {
-    margin: 20px 0;
-}
-
-.tab {
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: #fff;
+.tab-content form{
+    background-color: white;
     border: none;
-    border-radius: 5px;
-    margin-right: 5px;
-    cursor: pointer;
+    border-radius: 0%;
+    box-shadow: none;
 }
 
-.tab:hover {
-    background-color: #0056b3;
-}
-
-
-.row {
-    display: flex;
+.row {   
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .col {
-    flex-basis: 48%;
+    flex-basis: 10%;
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
 input, select {
-    width: 100%;
-    padding: 8px;
+    width: 10%;
+    padding: 80px;
     border: 1px solid #ddd;
+    border-radius: 0px;
+}
+
+/*Asistencia docente*/
+#asistencia_d{
+    position: absolute;
+    width: 100%px;
+    height: 100%;
+    left: 350px;
+    top: 110px;
+}
+
+#btn-asis-alum{
+    background-color: orange;
+}
+
+.header_asis {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    padding: 0px;
+    border-radius: 8px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.header label {
+    font-weight: bold;
+    margin-right: 0px;
+}
+
+.header p {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.buttons-container {
+    margin-bottom: 5px;
+}
+
+.buttons-container button {
+    margin: 5px;
+    font-size: 14px;
+    padding: 8px 12px;
+}
+
+.accordion-button {
+    font-weight: bold;
+    background-color: #0056b3;
+}
+
+.accordion-body {
+    background-color: #fff;
+    padding: 15px;
     border-radius: 5px;
 }
-/*Asistencia docente*/
+
+.report-table {
+    text-align: center;
+}
+
+.report-table th {
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+}
+
+.report-table td {
+    background-color: #f8f9fa;
+}
+
+.report-table td.bg-success {
+    background-color: #28a745 !important;
+}

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,16 +17,15 @@
 
 <body>
     <section id="content" class="container-fluid">
-            <!-- Barra Superior -->
-            
-<header>
+        <!-- Barra Superior -->          
+        <header>
             <nav class="navbar">
                 <button id="ocultarsidebar" class="btn">
                     <i class="bi bi-justify-left"></i>
                 </button>
                 <span>CORDOVA DIAZ, PABLO</span>
             </nav>
-</header>
+        </header>
              
     <div class="container">
             <!-- Menú de navegación lateral -->
@@ -163,35 +161,34 @@
                                 </div>
                         </div>
                     </div>   
-                </div>
+    </div>
 
-                <div class="container">
-                    
-                    <div class="header">
-                        <label for="semestre">Semestre:</label>
+        <div id="asistencia_d" class="container">                    
+            <div class="header_asis">
+                <label for="semestre">Semestre:</label>
                         <select id="semestre" class="form-select d-inline-block w-auto align-items-left">
                             <option>2023</option>
                             <option>2024</option>
-                        </select>
-                        <p>Presione este botón solo cuando tenga que registrar su entrada y salida de clase</p>
+                        </select>        
+            </div>
+            <center>
+            <p>Presione este botón solo cuando tenga que registrar su entrada y salida de clase</p>
+            </center>
                         <div class="d-flex justify-content-center align-items-center">
-                            <span id="current-time" class="me-3">Hora: 12:24:46</span>
                             <button class="btn btn-success">Marcar mi Asistencia: Entrada / Salida</button>
                             <a href="#" class="ms-2">Ayuda</a>
                         </div>
-                    </div>
-            
                     <!-- Opciones de Asistencia -->
                     <div class="buttons-container text-center">
-                        <button class="btn btn-primary">Tomar Asistencia Alumnos</button>
+                        <button id="btn-asis-alum"  class="btn">Tomar Asistencia Alumnos</button>
                         <br>
                         <button class="btn btn-primary">Solicitar Recuperación / Justificación</button>
                         <div class="mt-3">
-                            <button class="btn btn-primary">P: Puntual</button>
-                            <button class="btn btn-primary">T: Tardanza (min)</button>
-                            <button class="btn btn-primary">F: Falta</button>
-                            <button class="btn btn-primary">N.N: N.N</button>
-                            <button class="btn btn-primary">Reporte</button>
+                            <p class="btn btn-primary">P: Puntual</p>
+                            <p class="btn btn-primary">T: Tardanza (min)</p>
+                            <p class="btn btn-primary">F: Falta</p>
+                            <p class="btn btn-primary">N.N: N.N</p>
+                            <p class="btn btn-primary">Reporte</p>
                         </div>
                     </div>
             
@@ -249,11 +246,9 @@
                                     </table>
                                 </div>
                             </div>
-                        </div>
-            
-            
-                    </div>
-                </div>
+                </div>          
+            </div>
+        </div>
 
         </section>
             
@@ -264,13 +259,19 @@
             document.addEventListener("DOMContentLoaded", function () {
                 const toggleButton = document.getElementById("ocultarsidebar");
                 const sidebar = document.getElementById("sidebarMenu");
-                const mainContent = document.querySelector("main");
+                const content = document.getElementById("content");
         
                 toggleButton.addEventListener("click", function () {
-                    sidebar.classList.toggle("hidden");
-                    mainContent.classList.toggle("expanded");
-                });
-            });
+        sidebar.classList.toggle("hidden");
+
+        // Alterna la clase que expande el contenido y el header
+        if (sidebar.classList.contains("hidden")) {
+            content.classList.add("full-width");
+        } else {
+            content.classList.remove("full-width");
+        }
+    });
+});
         </script>
 </body>
 </html>

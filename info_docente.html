@@ -19,12 +19,12 @@
         <!-- Barra Superior -->
         
 <header>
-                <nav class="navbar">
-                    <button id="ocultarsidebar" class="btn">
-                        <i class="bi bi-justify-left"></i>
-                    </button>
-                    <span>CORDOVA DIAZ, PABLO</span>
-                </nav>
+    <nav class="navbar">
+        <button id="ocultarsidebar" class="btn">
+            <i class="bi bi-justify-left"></i>
+        </button>
+        <span>CORDOVA DIAZ, PABLO</span>
+    </nav>
 </header>
         
             <div class="container">
@@ -169,7 +169,7 @@
                 <img src="perfil.png" alt="Foto de perfil" class="profile-pic">
                 <div class="profile-info">
                     <h2>APELLIDOS, NOMBRE</h2>
-                    <p>DNI: 12345678</p>
+                    <p>12345678</p>
                 </div>
 
             </div>
@@ -180,43 +180,126 @@
                 <button class="btn btn-pdf">Generar PDF</button>
             </div>
 
-            <div class="tabs">
-                <button class="tab">1er</button>
-                <button class="tab">2do</button>
-                <button class="tab">3er</button>
-                <button class="tab">4to</button>
-            </div>
-        
-            <div class="section">
-                <h3>1. DATOS PERSONALES</h3>
+             <!-- Navegación por Tabs -->
+        <ul class="nav nav-tabs my-3" role="tablist">
+            <li class="nav-item">
+                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#datos-personales" type="button" role="tab">1er</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#datos-laborales" type="button" role="tab">2do</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#datos-formacion" type="button" role="tab">3er</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#otros-datos" type="button" role="tab">4to</button>
+            </li>
+        </ul>
+
+        <!-- Contenido de las Tabs -->
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="datos-personales" role="tabpanel">     
                 <form>
-                    <div class="row">
-                        <div class="col">
-                            <label>Sexo</label>
-                            <select>
+                    <h5 class="mb-1">1.- Datos Personales</h5>
+                    <div class="row mb-1">
+                        <div class="col-md-2">
+                            <label for="sexo" class="form-label">Sexo</label>
+                            <select id="sexo" class="form-select">
                                 <option>Masculino</option>
                                 <option>Femenino</option>
                             </select>
                         </div>
-                        <div class="col">
-                            <label>Fecha Nacimiento</label>
-                            <input type="date" value="1975-02-16">
+                        <div class="col-md-2">
+                            <label for="fechaNacimiento" class="form-label align-items-center">Fecha Nacimiento</label>
+                            <input type="date" id="fechaNacimiento" class="form-control">
                         </div>
                     </div>
-
-                    <div class="row">
-                        <div class="col">
-                            <label>Teléfono Fijo</label>
-                            <input type="text" value="5316292">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="telefono" class="form-label">Teléfono Fijo</label>
+                            <input type="text" id="telefono" class="form-control" placeholder="Ingrese número telefónico">
                         </div>
-                        <div class="col">
-                            <label>Celular</label>
-                            <input type="text" value="951629294">
+                        <div class="col-md-6">
+                            <label for="celular" class="form-label">Celular</label>
+                            <input type="text" id="celular" class="form-control" placeholder="Ingrese número celular">
                         </div>
                     </div>
-
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="dni" class="form-label">DNI</label>
+                            <input type="text" id="dni" class="form-control" placeholder="Ingrese su DNI">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="ruc" class="form-label">RUC</label>
+                            <input type="text" id="ruc" class="form-control" placeholder="Ingrese su RUC">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="estadoCivil" class="form-label">Estado Civil</label>
+                            <select id="estadoCivil" class="form-select">
+                                <option>Soltero</option>
+                                <option>Casado</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="fechaMatrimonio" class="form-label">Fecha Matrimonio</label>
+                            <input type="date" id="fechaMatrimonio" class="form-control">
+                        </div>
+                    </div>
                 </form>
             </div>
+
+            <div class="tab-pane fade" id="datos-laborales" role="tabpanel">
+                <form>
+                    <h5 class="mb-4">2.- Datos Laborales</h5>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="condicion" class="form-label">Condición(C/N)</label>
+                            <select id="condicion" class="form-select">
+                                <option>Contratado</option>
+                                <option>No contratado</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="fechaingreso" class="form-label">Fecha Ingreso FIM</label>
+                            <input type="date" id="fechaingreso" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="telefono" class="form-label">Teléfono Fijo</label>
+                            <input type="text" id="telefono" class="form-control" placeholder="Ingrese número telefónico">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="celular" class="form-label">Celular</label>
+                            <input type="text" id="celular" class="form-control" placeholder="Ingrese número celular">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="estadoCivil" class="form-label">Estado Civil</label>
+                            <select id="estadoCivil" class="form-select">
+                                <option>Soltero</option>
+                                <option>Casado</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="fechaMatrimonio" class="form-label">Fecha Matrimonio</label>
+                            <input type="date" id="fechaMatrimonio" class="form-control">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="tab-pane fade" id="datos-formacion" role="tabpanel">
+                <h5 class="mb-4">3.- DATOS DE FORMACIÓN PORFESIONAL:Indicar Grados y Títulos obtenidos, señalando Fecha de Revalidación, para el caso de Títulos y Grados otorgados en el Extranjero</h5>
+            </div>
+
+            <div class="tab-pane fade" id="otros-datos" role="tabpanel">
+                <h5 class="mb-4">4.- Otros Datos</h5>
+            </div>
+        </div>
 
         </div>
 
@@ -229,13 +312,19 @@
         document.addEventListener("DOMContentLoaded", function () {
             const toggleButton = document.getElementById("ocultarsidebar");
             const sidebar = document.getElementById("sidebarMenu");
-            const mainContent = document.querySelector("main");
+            const content = document.getElementById("content");
     
             toggleButton.addEventListener("click", function () {
-                sidebar.classList.toggle("hidden");
-                mainContent.classList.toggle("expanded");
-            });
-        });
+    sidebar.classList.toggle("hidden");
+
+    // Alterna la clase que expande el contenido y el header
+    if (sidebar.classList.contains("hidden")) {
+        content.classList.add("full-width");
+    } else {
+        content.classList.remove("full-width");
+    }
+});
+});
     </script>
 </body>
 </html>

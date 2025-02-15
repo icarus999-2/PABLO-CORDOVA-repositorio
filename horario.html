@@ -18,18 +18,17 @@
 <body>
 
 <!-- Contenido principal -->
-<section id="content" class="container-fluid">
+<section id="content">
 <!-- Barra Superior -->
-
-<header id="nombre_usuario">
+    <header>
         <nav class="navbar">
             <button id="ocultarsidebar" class="btn">
                 <i class="bi bi-justify-left"></i>
             </button>
             <span>CORDOVA DIAZ, PABLO</span>
         </nav>
-</header>
-  
+    </header>
+
     <div class="container">
             <!-- Menú de navegación lateral -->
         <div>
@@ -376,21 +375,24 @@
 
     <script src="horariojs.js"></script>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const sidebar = document.getElementById("sidebarMenu");
-        const content = document.getElementById("content");
-        const toggleButton = document.getElementById("ocultarsidebar");
-
-        toggleButton.addEventListener("click", function () {
-            sidebar.classList.toggle("hidden");
-            content.classList.toggle("full-width");
-        });
-
+            <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const toggleButton = document.getElementById("ocultarsidebar");
+                const sidebar = document.getElementById("sidebarMenu");
+                const content = document.getElementById("content");
         
+                toggleButton.addEventListener("click", function () {
+        sidebar.classList.toggle("hidden");
 
+        // Alterna la clase que expande el contenido y el header
+        if (sidebar.classList.contains("hidden")) {
+            content.classList.add("full-width");
+        } else {
+            content.classList.remove("full-width");
+        }
     });
-    </script>
+});
+        </script>
 
 </body>
 </html>
