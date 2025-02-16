@@ -339,17 +339,19 @@ input, select {
     width: 100%px;
     height: 100%;
     left: 350px;
-    top: 110px;
+    top: 130px;
 }
 
 #btn-asis-alum{
     background-color: orange;
+    font-size: 16px;
 }
 
 .header_asis {
+    position: fixed;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
-    width: 100%;
+    width: 15%;
     padding: 0px;
     border-radius: 8px;
     text-align: left;
@@ -361,13 +363,16 @@ input, select {
     margin-right: 0px;
 }
 
-.header p {
-    font-size: 15px;
-    margin-top: 5px;
+#asistencia_d p {
+    font-size: 20px;
+    margin-top: 0px;
+    /*position: absolute;*/
+    top: 95px;
 }
 
 .buttons-container {
     margin-bottom: 5px;
+    top: 100px;
 }
 
 .buttons-container button {
