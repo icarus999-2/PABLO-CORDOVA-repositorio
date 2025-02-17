@@ -20,18 +20,18 @@
 <!-- Contenido principal -->
 <section id="content">
 <!-- Barra Superior -->
-    <header>
+<header>
         <nav class="navbar">
             <button id="ocultarsidebar" class="btn">
                 <i class="bi bi-justify-left"></i>
             </button>
             <span>CORDOVA DIAZ, PABLO</span>
         </nav>
-    </header>
+</header>
 
     <div class="container">
             <!-- Menú de navegación lateral -->
-        <div>
+    <div>
             <div class="row">
                 <!-- <a href="home.html" class="d-flex">-->
                     <div id="sidebarMenu" class="flex-shrink-0 mt-0">
@@ -162,15 +162,25 @@
                         </li>
                     </ul>
             </div>
-        </div>
+            </div>
     </div>
     
             <!-- Menú de navegación lateral -->       
 
         <div id="Horario_clase">
+            
             <h2 id="Horario" >HORARIO DE CLASE</h2>
+            <div id="elec-semestre">
+                <label for="semestre">Semestre:</label>
+                        <select id="semestreSeleccionado" class="form-select d-inline-block w-auto align-items-left">
+                            <option value="20241">20241</option>
+                            <option value="20242">20242</option>
+                        </select> 
+            </div>
+
             <h4><strong>Nota :</strong> precione en los cuadros a colores para listar alumnos</h4>
                 <button id="Horario_button">Descargar PDF</button>
+                
                 <table>
                 <thead>
                     <tr>
@@ -368,30 +378,9 @@
     </div>
     </section>
 
+    <script src="horariojs.js"></script>
+    <script src="ocultal-mostrar.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!-- Custom JS -->
-
-    <script src="horariojs.js"></script>
-
-    <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const toggleButton = document.getElementById("ocultarsidebar");
-                const sidebar = document.getElementById("sidebarMenu");
-                const content = document.getElementById("content");
-        
-                toggleButton.addEventListener("click", function () {
-        sidebar.classList.toggle("hidden");
-
-        // Alterna la clase que expande el contenido y el header
-        if (sidebar.classList.contains("hidden")) {
-            content.classList.add("full-width");
-        } else {
-            content.classList.remove("full-width");
-        }
-    });
-});
-    </script>
-
 </body>
 </html>

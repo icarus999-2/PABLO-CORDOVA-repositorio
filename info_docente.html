@@ -198,6 +198,7 @@
 
         <!-- Contenido de las Tabs -->
         <div class="tab-content">
+            <!--Tab 1 datos personales-->
             <div class="tab-pane fade show active" id="datos-personales" role="tabpanel">     
                 <form>
                     <h5 class="mb-1">1.- Datos Personales</h5>
@@ -250,6 +251,7 @@
                 </form>
             </div>
 
+            <!--Tab 2 datos laborales-->
             <div class="tab-pane fade" id="datos-laborales" role="tabpanel">
                 <form>
                     <h5 class="mb-4">2.- Datos Laborales</h5>
@@ -266,27 +268,35 @@
                             <input type="date" id="fechaingreso" class="form-control">
                         </div>
                     </div>
+
                     <div class="row mb-3">
                         <div class="col-md-6">
-                            <label for="telefono" class="form-label">Teléfono Fijo</label>
-                            <input type="text" id="telefono" class="form-control" placeholder="Ingrese número telefónico">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="celular" class="form-label">Celular</label>
-                            <input type="text" id="celular" class="form-control" placeholder="Ingrese número celular">
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="estadoCivil" class="form-label">Estado Civil</label>
-                            <select id="estadoCivil" class="form-select">
-                                <option>Soltero</option>
-                                <option>Casado</option>
+                            <label for="categoria" class="form-label">Categoria</label>
+                            <select id="categoria" class="form-select">
+                                <option>C</option>
+                                <option>N</option>
                             </select>
                         </div>
                         <div class="col-md-6">
-                            <label for="fechaMatrimonio" class="form-label">Fecha Matrimonio</label>
-                            <input type="date" id="fechaMatrimonio" class="form-control">
+                            <label for="dedicacion" class="form-label">Dedicación</label>
+                            <select id="dedicacion" class="form-select">
+                                <option>C</option>
+                                <option>N</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="fechaNombramiento" class="form-label">Fecha Nombramiento</label>
+                            <input type="date" id="fechaNombramiento" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="regimen-pension" class="form-label">Régimen pensionario</label>
+                            <select id="regimen-pension" class="form-select">
+                                <option>Contratado</option>
+                                <option>No contratado</option>
+                            </select>
                         </div>
                     </div>
                 </form>
@@ -308,23 +318,6 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- Custom JS -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const toggleButton = document.getElementById("ocultarsidebar");
-            const sidebar = document.getElementById("sidebarMenu");
-            const content = document.getElementById("content");
-    
-            toggleButton.addEventListener("click", function () {
-    sidebar.classList.toggle("hidden");
-
-    // Alterna la clase que expande el contenido y el header
-    if (sidebar.classList.contains("hidden")) {
-        content.classList.add("full-width");
-    } else {
-        content.classList.remove("full-width");
-    }
-});
-});
-    </script>
+    <script src="ocultal-mostrar.js"></script>
 </body>
 </html>

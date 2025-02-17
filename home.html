@@ -170,24 +170,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <!-- Custom JS -->
          
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const toggleButton = document.getElementById("ocultarsidebar");
-                const sidebar = document.getElementById("sidebarMenu");
-                const section = document.getElementById("content");
-        
-                toggleButton.addEventListener("click", function () {
-        sidebar.classList.toggle("hidden");
-
-        // Alterna la clase que expande el contenido y el header
-        if (sidebar.classList.contains("hidden")) {
-            section.classList.add("full-width");
-        } else {
-            section.classList.remove("full-width");
-        }
-    });
-});
-        </script>
+        <script src="ocultal-mostrar.js"></script>
 
 </body>
 </html>

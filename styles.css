@@ -188,8 +188,7 @@ button:hover {
 }
 
 #sidebarMenu a {
-font-size: 15px;
-
+    font-size: 15px;
 }
 
 h4{
@@ -208,15 +207,23 @@ h4{
 }
 
 #Horario_clase{
+    position: relative;
+    width: 84%;
+    margin-left: 30px;
+    margin-top: 80px;
+}
+
+#elec-semestre{
+    background-color: white;
     position: absolute;
-    width: 80%;
-    left: 345px;
-    top: 90px;
+    left: 1300px;
+    top: 10px;
+    width: 25%;
 }
 
 /* Ajustes generales para tablas */
 table {
-    width: 100%;
+    width: 130%;
     border-collapse: collapse;
     margin-top: 15px;
 }
@@ -335,7 +342,7 @@ input, select {
 
 /*Asistencia docente*/
 #asistencia_d{
-    position: absolute;
+    position: fixed;
     width: 100%px;
     height: 100%;
     left: 350px;
@@ -345,10 +352,11 @@ input, select {
 #btn-asis-alum{
     background-color: orange;
     font-size: 16px;
+    margin-bottom: 14px;
 }
 
 .header_asis {
-    position: fixed;
+    position: absolute;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
     width: 15%;
@@ -359,6 +367,7 @@ input, select {
 }
 
 .header label {
+    position: absolute;
     font-weight: bold;
     margin-right: 0px;
 }
@@ -366,17 +375,32 @@ input, select {
 #asistencia_d p {
     font-size: 20px;
     margin-top: 0px;
-    /*position: absolute;*/
-    top: 95px;
+    position: absolute;
+    top: 80px;
+    left: 300px;
 }
 
-.buttons-container {
-    margin-bottom: 5px;
-    top: 100px;
+#btn-asistencia{
+    background-color: #ffffff;
+    position: relative;
+    top: 125px;
 }
+
+#op-asis{
+    background-color: #ffffff;
+    top: 100px;
+    position: relative;
+    top: 140px;
+}
+
+.accordion-item{
+    position: relative;
+    top: 180px;
+}
+
 
 .buttons-container button {
-    margin: 5px;
+    margin: 3px;
     font-size: 14px;
     padding: 8px 12px;
 }
