@@ -1,0 +1,100 @@
+{
+  "cursos": [
+    {
+      "id": 1,
+      "codCurso": "BIF01",
+      "nomCurso": "curso_1",
+      "secCurso": "C/D",
+      "codDocente": 87546375,
+      "docente": "docente_1",
+      "teopra": "T/P",
+      "hora": "08-09",
+      "dia": "Martes",
+      "semestre": 20241
+    },
+    {
+      "id": 2,
+      "codCurso": "BIF02",
+      "nomCurso": "curso_2",
+      "secCurso": "E/F",
+      "codDocente": 12345678,
+      "docente": "docente_2",
+      "teopra": "T/P",
+      "hora": "11-12",
+      "dia": "Martes",
+      "semestre": 20241
+    },
+    {
+      "id": 3,
+      "codCurso": "BIF03",
+      "nomCurso": "curso_3",
+      "secCurso": "C/D",
+      "codDocente": 87546374,
+      "docente": "docente_3",
+      "teopra": "T/P",
+      "hora": "08-09",
+      "dia": "Miércoles",
+      "semestre": 20242
+    },
+    {
+      "id": 4,
+      "codCurso": "BIF04",
+      "nomCurso": "curso_4",
+      "secCurso": "C/D",
+      "codDocente": 87546374,
+      "docente": "docente_4",
+      "teopra": "T/P",
+      "hora": "18-19",
+      "dia": "Martes",
+      "semestre": 20242
+    },
+    {
+      "id": 5,
+      "codCurso": "BIF05",
+      "nomCurso": "curso_5",
+      "secCurso": "C/D",
+      "codDocente": 87546374,
+      "docente": "docente_5",
+      "teopra": "T/P",
+      "hora": "10-11",
+      "dia": "Miércoles",
+      "semestre": 20241
+    },
+    {
+      "id": 6,
+      "codCurso": "BIF06",
+      "nomCurso": "curso_6",
+      "secCurso": "C/D",
+      "codDocente": 87546374,
+      "docente": "docente_6",
+      "teopra": "T/P",
+      "hora": "08-09",
+      "dia": "Viernes",
+      "semestre": 20242
+    },
+    {
+      "id": 7,
+      "codCurso": "BIF07",
+      "nomCurso": "curso_7",
+      "secCurso": "C/D",
+      "codDocente": 87546374,
+      "docente": "docente_7",
+      "teopra": "T/P",
+      "hora": "17-18",
+      "dia": "Jueves",
+      "semestre": 20241
+    },
+    {
+      "id": 8,
+      "codCurso": "BIF08",
+      "nomCurso": "curso_8",
+      "secCurso": "C/D",
+      "codDocente": 87546374,
+      "docente": "docente_8",
+      "teopra": "T/P",
+      "hora": "08-09",
+      "dia": "Jueves",
+      "semestre": 20242
+    }
+  ]
+}
