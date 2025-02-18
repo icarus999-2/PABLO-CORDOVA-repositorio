@@ -420,10 +420,10 @@ input, select {
 }
 .accordion-item{
     position: relative;
-    top: 180px;
+    top: 150px;
 }
 .buttons-container button {
-    margin: 3px;
+    margin: 0px;
     font-size: 14px;
     padding: 8px 12px;
 }
@@ -433,7 +433,7 @@ input, select {
 }
 .accordion-body {
     background-color: #fff;
-    padding: 15px;
+    padding: 5px;
     border-radius: 5px;
 }
 .report-table {
