@@ -171,17 +171,17 @@
             
             <h2 id="Horario" >HORARIO DE CLASE</h2>
             <div id="elec-semestre">
-                <label for="semestre">Semestre:</label>
-                        <select id="semestreSeleccionado" class="form-select d-inline-block w-auto align-items-left">
-                            <option value="20241">20241</option>
-                            <option value="20242">20242</option>
+                <label for="semestreSelect">Semestre:</label>
+                        <select id="semestreSelect" class="form-select d-inline-block w-auto align-items-left">
+                            <option value="semestre1">20241</option>
+                            <option value="semestre2">20242</option>
                         </select> 
             </div>
 
             <h4><strong>Nota :</strong> precione en los cuadros a colores para listar alumnos</h4>
                 <button id="Horario_button">Descargar PDF</button>
                 
-                <table>
+                <table id="horariosTable">
                 <thead>
                     <tr>
                         <th>Hora</th>
@@ -194,16 +194,11 @@
                         <th>Domingo</th>
                     </tr>
                 </thead>
+
                 <tbody>
                     <tr>
                         <td>07 - 08</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
                     </tr>
 
                     <tr>
@@ -377,7 +372,7 @@
         </div>
     </div>
     </section>
-
+    
     <script src="horariojs.js"></script>
     <script src="ocultar-mostrar.js"></script>
     <!-- Bootstrap JS -->

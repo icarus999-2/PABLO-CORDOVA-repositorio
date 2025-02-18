@@ -1,5 +1,5 @@
-{
-  "cursos": [
+{"cursos":
+[
     {
       "id": 1,
       "codCurso": "BIF01",
@@ -44,7 +44,7 @@
       "codDocente": 87546374,
       "docente": "docente_4",
       "teopra": "T/P",
-      "hora": "18-19",
+      "hora": "20-21",
       "dia": "Martes",
       "semestre": 20242
     },
