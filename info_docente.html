@@ -18,7 +18,7 @@
     <section id="content" class="container-fluid">
         <!-- Barra Superior -->
         
-<header>
+<header >
     <nav class="navbar">
         <button id="ocultarsidebar" class="btn">
             <i class="bi bi-justify-left"></i>
@@ -27,12 +27,10 @@
     </nav>
 </header>
         
-            <div class="container">
-                    <!-- Menú de navegación lateral -->
-                <div>
-                    <div class="row">
-                        <!-- <a href="home.html" class="d-flex">-->
-                            <div id="sidebarMenu" class="flex-shrink-0 mt-0">
+            <div class="sidebarMenu-container">
+                <!-- Menú de navegación lateral -->
+                <div id="div-menulateral">
+                    <div id="sidebarMenu">
                             <!-- imagen del menu lateral-->
                                 <div class="d-flex">
                                     <img src="https://www.earpunifim.com/assets/img/uni_gray_xs.png" alt="logo_conte" class="mt-1 pl-1" style="height:40px;">
@@ -159,7 +157,6 @@
                                         </div>
                                 </li>
                             </ul>
-                            </div>
                     </div>
                 </div>
             </div>
@@ -202,70 +199,69 @@
             <div class="tab-pane fade show active" id="datos-personales" role="tabpanel">     
                 <form>
                     <h5 class="mb-1">1.- Datos Personales</h5>
-                    <div class="row mb-1">
-                        <div class="col-md-2">
+
+                    <div class="row mb-2">
+                        <div class="col-md-3">
                             <label for="sexo" class="form-label">Sexo</label>
                             <select id="sexo" class="form-select">
                                 <option>Masculino</option>
                                 <option>Femenino</option>
                             </select>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <label for="fechaNacimiento" class="form-label align-items-center">Fecha Nacimiento</label>
                             <input type="date" id="fechaNacimiento" class="form-control">
                         </div>
+                        <div class="col-md-2">
+                            <label for="fechaMatrimonio" class="form-label">Fecha Matrimonio</label>
+                            <input type="date" id="fechaMatrimonio" class="form-control">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="dni" class="form-label">DNI</label>
+                            <input type="text" id="dni" class="form-control" placeholder="Ingrese su DNI">
+                        </div>
                     </div>
 
-                    <div class="row mb-3">
-                        <div class="col-md-6">
+                    <div class="row mb-2">
+                        <div class="col-md-3">
                             <label for="telefono" class="form-label">Teléfono Fijo</label>
                             <input type="text" id="telefono" class="form-control" placeholder="Ingrese número telefónico">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <label for="celular" class="form-label">Celular</label>
                             <input type="text" id="celular" class="form-control" placeholder="Ingrese número celular">
                         </div>
                     </div>
 
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="dni" class="form-label">DNI</label>
-                            <input type="text" id="dni" class="form-control" placeholder="Ingrese su DNI">
-                        </div>
-                        <div class="col-md-6">
+                    <div class="row mb-2">
+
+                        <div class="col-md-3">
                             <label for="ruc" class="form-label">RUC</label>
                             <input type="text" id="ruc" class="form-control" placeholder="Ingrese su RUC">
                         </div>
-                    </div>
-
-                    <div class="row mb-3">
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <label for="estadoCivil" class="form-label">Estado Civil</label>
                             <select id="estadoCivil" class="form-select">
                                 <option>Soltero</option>
                                 <option>Casado</option>
                             </select>
                         </div>
-                        <div class="col-md-6">
-                            <label for="fechaMatrimonio" class="form-label">Fecha Matrimonio</label>
-                            <input type="date" id="fechaMatrimonio" class="form-control">
-                        </div>
                     </div>
 
-                    <div class="row mb-3">
-                        <div class="col-md-6">
+                    <div class="row mb-2">
+                        <div class="col-md-3">
                             <label for="especificar-vehiculo" class="form-label">Si cuenta con vehiculo, especificar</label>
                             <input type="text" id="especificar-vehiculo" class="form-control">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <label for="cate-brevete" class="form-label">Brevete y categoria</label>
                             <input type="text" id="cate-brevete" class="form-control">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-2">
                             <label for="lib-militar" class="form-label">Lib.Militar</label>
                             <input type="text" id="lib-militar" class="form-control">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <label for="grupo-sanguineo" class="form-label">Grupo sanguineo</label>
                             <select id="grupo-sanguineo" class="form-select">
                                 <option>A+</option>
@@ -287,29 +283,22 @@
             <div class="tab-pane fade" id="datos-laborales" role="tabpanel">
                 <form>
                     <h5 class="mb-4">2.- Datos Laborales</h5>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
+                    <div class="row mb-2">
+                        <div class="col-md-3">
                             <label for="condicion" class="form-label">Condición(C/N)</label>
                             <select id="condicion" class="form-select">
                                 <option>Contratado</option>
                                 <option>No contratado</option>
                             </select>
                         </div>
-                        <div class="col-md-6">
-                            <label for="fechaingreso" class="form-label">Fecha Ingreso FIM</label>
-                            <input type="date" id="fechaingreso" class="form-control">
-                        </div>
-                    </div>
-
-                    <div class="row mb-3">
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <label for="categoria" class="form-label">Categoria</label>
                             <select id="categoria" class="form-select">
                                 <option>Planilla</option>
                                 <option>Contrato</option>
                             </select>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <label for="dedicacion" class="form-label">Dedicación</label>
                             <select id="dedicacion" class="form-select">
                                 <option>A</option>
@@ -319,14 +308,34 @@
                                 <option>E</option>
                             </select>
                         </div>
+                        <div class="col-md-3">
+                            <label for="Horas" class="form-label">Horas</label>
+                            <span id="Horas" class="form-control">32</span>
+                        </div>                      
                     </div>
 
-                    <div class="row mb-3">
-                        <div class="col-md-6">
+                    <div class="row mb-2">
+                        <div class="col-md-3">
+                            <label for="Horas-lectivas" class="form-label">Horas lectivas</label>
+                            <span id="Horas-lectivas" class="form-control">16</span>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="Dependencia-labora" class="form-label">Dependencia donde labora(Actual)</label>
+                            <input type="text" id="Dependencia-labora" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <div class="col-md-3">
+                            <label for="fechaingreso" class="form-label">Fecha Ingreso FIM</label>
+                            <input type="date" id="fechaingreso" class="form-control">
+                        </div>
+                        <div class="col-md-3">
                             <label for="fechaNombramiento" class="form-label">Fecha Nombramiento</label>
                             <input type="date" id="fechaNombramiento" class="form-control">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <label for="regimen-pension" class="form-label">Régimen pensionario</label>
                             <select id="regimen-pension" class="form-select">
                                 <option>AFP</option>
@@ -334,45 +343,140 @@
                                 <option>SNP</option>
                             </select>
                         </div>
+
                     </div>
 
-                    <div class="row mb-3">
-                        <div class="col-md-6">
+                    <div class="row mb-2">
+                        <div class="col-md-3">
                             <label for="AFPNombre" class="form-label">AFP (Nombre)</label>
                             <input type="text" id="AFPNombre" class="form-control">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <label for="Cod-AFP" class="form-label">Cód.AFP</label>
                             <input type="text" id="Cod-AFP" class="form-control">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <label for="Cod-Essalud" class="form-label">Cód.Essalud</label>
                             <input type="text" id="Cod-Essalud" class="form-control">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <label for="otro-seguro" class="form-label">Otro tipo de seguro</label>
                             <input type="text" id="otro-seguro" class="form-control">
                         </div>
 
                     </div>
-
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="Horas-lectivas" class="form-label">Horas lectivas</label>
-                            <input type="number" id="Horas-lectivas" class="form-control">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="Dependencia-labora" class="form-label">Dependencia donde labora(Actual)</label>
-                            <input type="text" id="Dependencia-labora" class="form-control">
-                        </div>
-                    </div>
-
                 </form>
             </div>
 
             <!--Tab 3 datos de formacion profesional-->
             <div class="tab-pane fade" id="datos-formacion" role="tabpanel">
                 <h5 class="mb-4">3.- DATOS DE FORMACIÓN PORFESIONAL:Indicar Grados y Títulos obtenidos, señalando Fecha de Revalidación, para el caso de Títulos y Grados otorgados en el Extranjero</h5>
+                <button id="btnAgregar">AÑADIR REGISTRO</button>
+    
+    <table id="tablaRegistros">
+        <thead>
+            <tr>
+                <th>Orden</th>
+                <th>Formación Profesional</th>
+                <th>País</th>
+                <th>Universidad</th>
+                <th>Especialidad</th>
+                <th>Fecha Inicio</th>
+                <th>Fecha Final</th>
+                <th>Grado Obtenido</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    
+    <div id="modal" class="modal">
+        <div class="modal-contenido">
+            <h2 id="modalTitulo">Añadir Registro</h2>
+            <form id="formRegistro">
+                <label>Formación Profesional:<input type="text" id="formacion" required></label>
+                <label>País:<input type="text" id="pais" required></label>
+                <label>Universidad:<input type="text" id="universidad" required></label>
+                <label>Especialidad:<input type="text" id="especialidad" required></label>
+                <label>Fecha Inicio:<input type="date" id="fechaInicio" required></label>
+                <label>Fecha Final:<input type="date" id="fechaFinal" required></label>
+                <label>Grado Obtenido:<input type="text" id="grado" required></label>
+                <input type="hidden" id="registroId">
+                <button type="submit">Guardar</button>
+                <button type="button" id="cerrarModal">Cancelar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const btnAgregar = document.getElementById("btnAgregar");
+            const modal = document.getElementById("modal");
+            const cerrarModal = document.getElementById("cerrarModal");
+            const formRegistro = document.getElementById("formRegistro");
+            const tbody = document.querySelector("#tablaRegistros tbody");
+            let registros = [];
+
+            function mostrarRegistros() {
+                tbody.innerHTML = "";
+                registros.forEach((registro, index) => {
+                    const fila = document.createElement("tr");
+                    fila.innerHTML = `
+                        <td>${index + 1}</td>
+                        <td>${registro.formacion}</td>
+                        <td>${registro.pais}</td>
+                        <td>${registro.universidad}</td>
+                        <td>${registro.especialidad}</td>
+                        <td>${registro.fechaInicio}</td>
+                        <td>${registro.fechaFinal}</td>
+                        <td>${registro.grado}</td>
+                        <td>
+                            <button onclick="editarRegistro(${index})">✏️</button>
+                            <button onclick="eliminarRegistro(${index})">🗑️</button>
+                        </td>
+                    `;
+                    tbody.appendChild(fila);
+                });
+            }
+
+            function guardarRegistro(event) {
+                event.preventDefault();
+                const registro = {
+                    formacion: document.getElementById("formacion").value,
+                    pais: document.getElementById("pais").value,
+                    universidad: document.getElementById("universidad").value,
+                    especialidad: document.getElementById("especialidad").value,
+                    fechaInicio: document.getElementById("fechaInicio").value,
+                    fechaFinal: document.getElementById("fechaFinal").value,
+                    grado: document.getElementById("grado").value
+                };
+                registros.push(registro);
+                mostrarRegistros();
+                modal.style.display = "none";
+            }
+
+            function editarRegistro(index) {
+                const registro = registros[index];
+                document.getElementById("formacion").value = registro.formacion;
+                document.getElementById("pais").value = registro.pais;
+                document.getElementById("universidad").value = registro.universidad;
+                document.getElementById("especialidad").value = registro.especialidad;
+                document.getElementById("fechaInicio").value = registro.fechaInicio;
+                document.getElementById("fechaFinal").value = registro.fechaFinal;
+                document.getElementById("grado").value = registro.grado;
+                modal.style.display = "block";
+            }
+
+            function eliminarRegistro(index) {
+                registros.splice(index, 1);
+                mostrarRegistros();
+            }
+
+            btnAgregar.addEventListener("click", () => modal.style.display = "block");
+            cerrarModal.addEventListener("click", () => modal.style.display = "none");
+            formRegistro.addEventListener("submit", guardarRegistro);
+        });
+    </script>
             </div>
 
             <!--Tab 4 otros datos-->

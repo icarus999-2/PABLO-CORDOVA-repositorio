@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const section = document.getElementById("content");
 
     toggleButton.addEventListener("click", function () {
-sidebar.classList.toggle("hidden");
+    sidebar.classList.toggle("hidden");
 
 // Alterna la clase que expande el contenido y el header
 if (sidebar.classList.contains("hidden")) {
