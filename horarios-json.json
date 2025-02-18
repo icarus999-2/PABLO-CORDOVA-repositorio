@@ -44,7 +44,7 @@
       "codDocente": 87546374,
       "docente": "docente_4",
       "teopra": "T/P",
-      "hora": "20-21",
+      "hora": "14-15",
       "dia": "Martes",
       "semestre": 20242
     },
@@ -94,6 +94,18 @@
       "teopra": "T/P",
       "hora": "08-09",
       "dia": "Jueves",
+      "semestre": 20242
+    },
+    {
+      "id": 9,
+      "codCurso": "BIF09",
+      "nomCurso": "curso_9",
+      "secCurso": "C/D",
+      "codDocente": 87546374,
+      "docente": "docente_9",
+      "teopra": "T/P",
+      "hora": "08-09",
+      "dia": "Lunes",
       "semestre": 20242
     }
   ]

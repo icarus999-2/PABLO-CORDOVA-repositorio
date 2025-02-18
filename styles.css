@@ -102,13 +102,13 @@ button:hover {
     display: flex;
     align-items: left;
     left: 305px;
-    position: fixed;
+    position: absolute;
     padding-left: 50px; 
     font-family: "Arial";
     font-size: 20px;
     line-height: 1;
     letter-spacing: .02em;
-    width: 100%; 
+    width: 1615px; 
     background-color: #3f51b5 !important;
     color: white;
     height: 56px;
@@ -252,17 +252,17 @@ th {
 }
 
 #info_docente{
-    position:fixed ;
+    position:relative ;
     top: 95px !important;
-    left: 345px;
-    width: 80%;
-    height: 85%;
+    left: 350px;
+    width: 78%;
+    height: 80%;
 }
 
 /* INFO DOCENTE*/
 .profile-container {
     background-color: white;
-    padding: 45px;
+    padding: 5px;
 }
 
 .profile-header {
@@ -281,14 +281,15 @@ th {
 }
 
 .profile-info{
-    position: fixed;
-    left: 550px;
+    position: absolute;
+    left: 200px;
 }
 
 .profile-info h2 {
     font-size: 30px;
     padding-left: 10px;
     text-align: left;
+
 }
 
 .profile-info p {
@@ -335,7 +336,7 @@ label {
 
 input, select {
     width: 10%;
-    padding: 80px;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 0px;
 }
