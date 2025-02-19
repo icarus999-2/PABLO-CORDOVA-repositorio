@@ -26,11 +26,10 @@
         <span>CORDOVA DIAZ, PABLO</span>
     </nav>
 </header>
-        
-            <div class="sidebarMenu-container">
-                <!-- Menú de navegación lateral -->
-                <div id="div-menulateral">
-                    <div id="sidebarMenu">
+    <div class="sidebarMenu-container">
+        <!-- Menú de navegación lateral -->
+        <div id="div-menulateral">
+            <div id="sidebarMenu">
                             <!-- imagen del menu lateral-->
                                 <div class="d-flex">
                                     <img src="https://www.earpunifim.com/assets/img/uni_gray_xs.png" alt="logo_conte" class="mt-1 pl-1" style="height:40px;">
@@ -157,11 +156,11 @@
                                         </div>
                                 </li>
                             </ul>
-                    </div>
-                </div>
             </div>
+        </div>
+    </div>
             <!-- Info docente-->
-        <div id= "info_docente" class="profile-container">
+    <div id= "info_docente" class="profile-container">
             <div class="profile-header">
                 <img src="perfil.png" alt="Foto de perfil" class="profile-pic">
                 <div class="profile-info">
@@ -276,6 +275,41 @@
                         </div>
                     </div>
 
+                    <div class="row mb-2">
+                        <div class="col-md-3">
+                            <label for="email" class="form-label">Email(s)</label>
+                            <input type="email" id="email-1" class="form-control">
+                            <input type="email" id="email-2" class="form-control">
+                        </div>
+
+                    </div>
+
+                    <h5 class="mb-1">Lugar de nacimiento</h5>
+                    <br>
+                    <div class="row mb-2">
+                        <div class="col-md-6">
+                            <label for="pais" class="form-label">País</label>
+                            <select class="form-select"> </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Departamento" class="form-label">Departamento</label>
+                            <select class="form-select"> </select>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <div class="col-md-6">
+                            <label for="Provincia" class="form-label">Provincia</label>
+                            <select class="form-select"> </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Distrito" class="form-label">Distrito</label>
+                            <select class="form-select"> </select>
+                        </div>
+                    </div>
+
+                    
+
                 </form>
             </div>
 
@@ -371,9 +405,9 @@
             <!--Tab 3 datos de formacion profesional-->
             <div class="tab-pane fade" id="datos-formacion" role="tabpanel">
                 <h5 class="mb-4">3.- DATOS DE FORMACIÓN PORFESIONAL:Indicar Grados y Títulos obtenidos, señalando Fecha de Revalidación, para el caso de Títulos y Grados otorgados en el Extranjero</h5>
-                <button id="btnAgregar">AÑADIR REGISTRO</button>
+                <button id="btnAgregarFormacion">AÑADIR REGISTRO</button>
     
-    <table id="tablaRegistros">
+                <table id="tablaRegistros">
         <thead>
             <tr>
                 <th>Orden</th>
@@ -388,9 +422,9 @@
             </tr>
         </thead>
         <tbody></tbody>
-    </table>
+                </table>
     
-    <div id="modal" class="modal">
+                <div id="modal" class="modal">
         <div class="modal-contenido">
             <h2 id="modalTitulo">Añadir Registro</h2>
             <form id="formRegistro">
@@ -406,77 +440,8 @@
                 <button type="button" id="cerrarModal">Cancelar</button>
             </form>
         </div>
-    </div>
+                </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const btnAgregar = document.getElementById("btnAgregar");
-            const modal = document.getElementById("modal");
-            const cerrarModal = document.getElementById("cerrarModal");
-            const formRegistro = document.getElementById("formRegistro");
-            const tbody = document.querySelector("#tablaRegistros tbody");
-            let registros = [];
-
-            function mostrarRegistros() {
-                tbody.innerHTML = "";
-                registros.forEach((registro, index) => {
-                    const fila = document.createElement("tr");
-                    fila.innerHTML = `
-                        <td>${index + 1}</td>
-                        <td>${registro.formacion}</td>
-                        <td>${registro.pais}</td>
-                        <td>${registro.universidad}</td>
-                        <td>${registro.especialidad}</td>
-                        <td>${registro.fechaInicio}</td>
-                        <td>${registro.fechaFinal}</td>
-                        <td>${registro.grado}</td>
-                        <td>
-                            <button onclick="editarRegistro(${index})">✏️</button>
-                            <button onclick="eliminarRegistro(${index})">🗑️</button>
-                        </td>
-                    `;
-                    tbody.appendChild(fila);
-                });
-            }
-
-            function guardarRegistro(event) {
-                event.preventDefault();
-                const registro = {
-                    formacion: document.getElementById("formacion").value,
-                    pais: document.getElementById("pais").value,
-                    universidad: document.getElementById("universidad").value,
-                    especialidad: document.getElementById("especialidad").value,
-                    fechaInicio: document.getElementById("fechaInicio").value,
-                    fechaFinal: document.getElementById("fechaFinal").value,
-                    grado: document.getElementById("grado").value
-                };
-                registros.push(registro);
-                mostrarRegistros();
-                modal.style.display = "none";
-            }
-
-            function editarRegistro(index) {
-                const registro = registros[index];
-                document.getElementById("formacion").value = registro.formacion;
-                document.getElementById("pais").value = registro.pais;
-                document.getElementById("universidad").value = registro.universidad;
-                document.getElementById("especialidad").value = registro.especialidad;
-                document.getElementById("fechaInicio").value = registro.fechaInicio;
-                document.getElementById("fechaFinal").value = registro.fechaFinal;
-                document.getElementById("grado").value = registro.grado;
-                modal.style.display = "block";
-            }
-
-            function eliminarRegistro(index) {
-                registros.splice(index, 1);
-                mostrarRegistros();
-            }
-
-            btnAgregar.addEventListener("click", () => modal.style.display = "block");
-            cerrarModal.addEventListener("click", () => modal.style.display = "none");
-            formRegistro.addEventListener("submit", guardarRegistro);
-        });
-    </script>
             </div>
 
             <!--Tab 4 otros datos-->
@@ -484,14 +449,12 @@
                 <h5 class="mb-4">4.- Otros Datos</h5>
             </div>
         </div>
-
-        </div>
-
-    </section>
-        
+    </div>
+</section>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- Custom JS -->
+    <script src="registro-formacion.js"></script>
     <script src="ocultar-mostrar.js"></script>
 </body>
 </html>

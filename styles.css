@@ -310,6 +310,7 @@ label {
 input, select {
     width: 10%;
     padding: 10px;
+    margin: 2px;
     border: 1px solid #ddd;
     border-radius: 0px;
 }
